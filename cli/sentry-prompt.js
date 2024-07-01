@@ -47,7 +47,7 @@ function prompt() {
 
   return Promise.race([
     prompt.run().then(result => {
-      clearTimeout(/** @type {NodeJS.Timeout} */ (timeout));
+      clearTimeout(timeout);
       return result;
     }),
     timeoutPromise,
